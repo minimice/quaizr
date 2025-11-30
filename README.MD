@@ -137,7 +137,9 @@ This is a starting blueprint for AI-assisted learning that respects pedagogical 
 # 📦 Project Resources
 Source Code: [GitHub Repository](https://github.com/minimice/quaizr)  
 Docker Image: minimice/quaizr:0.0.1  
+YouTube: [YouTube demo](https://www.youtube.com/watch?v=eq2Bi1C6Hno)  
 Built by: Lim, Chooi Guan ([LinkedIn](https://linkedin.com/in/cgl88))
+
 
 ## Local deployment instructions
 
