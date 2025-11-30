@@ -1,0 +1,3 @@
+id,category,difficulty,question,option_a,option_b,option_c,option_d,correct_answer,correct_text,explanation
+1,Compute,Easy,Which GCP service is best for hosting containerized applications?,Cloud Run,Google Kubernetes Engine (GKE),App Engine Standard,Compute Engine,B,Google Kubernetes Engine (GKE),GKE is a managed Kubernetes service ideal for running containerized applications.
+2,Storage,Easy,Which storage class is most cost-effective for long-term backups?,Standard,Nearline,Coldline,Archive,D,Archive,Archive storage offers the lowest cost for data accessed less than once a year.

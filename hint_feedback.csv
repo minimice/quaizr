@@ -1,0 +1,3 @@
+timestamp,username,quiz_name,question_number,question,hint,useful
+2025-11-30T15:22:59.431764,Paul Brickner,Quiz,1,Which GCP service is best for hosting containerized applications?,Think about services designed for container orchestration and management.,True
+2025-11-30T15:23:15.160078,Paul Brickner,Quiz,2,Which storage class is most cost-effective for long-term backups?,Consider infrequently accessed data and retrieval costs.,False
