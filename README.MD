@@ -65,7 +65,7 @@ This dual-layer approach combines curated content quality with AI flexibility.
 
 # 🛠️ Technical Implementation
 
-##Technology Stack
+## Technology Stack
 
 - Framework: Google ADK (Agent Development Kit)
 - AI Agents: Gemini 2.5 Flash Lite (chosen for speed and cost-efficiency)
