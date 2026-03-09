@@ -176,3 +176,94 @@ You will require Python 3.11.14 (tested) and a code editor.
 7. Test your changes, press Ctrl+C to stop the app.
 8. Run `deactivate` to deactivate the virtual env.
 9. Done!
+
+## Testing
+
+QuAIzR includes a comprehensive unit test suite to ensure code quality and reliability.
+
+### Pre-requisites
+
+Testing dependencies are included in `requirements.txt`:
+- pytest>=7.0.0
+- pytest-cov>=4.0.0
+
+### Running Tests
+
+```bash
+# Create and activate virtual environment
+python -m venv venv
+source ./venv/bin/activate
+
+# Install dependencies (including test deps)
+pip install -r requirements.txt
+
+# Run all tests
+pytest
+
+# Run with verbose output
+pytest -v
+
+# Run specific test file
+pytest tests/test_helpers.py
+
+# Run specific test function
+pytest tests/test_helpers.py::test_click_button
+
+# Run tests by marker
+pytest -m unit          # Run only unit tests
+pytest -m integration   # Run only integration tests
+```
+
+### Running with Coverage
+
+```bash
+# Run with coverage report
+pytest --cov=app --cov=helpers --cov-report=term-missing
+
+# Run with HTML coverage report
+pytest --cov=app --cov=helpers --cov-report=html
+
+# Open HTML report (macOS)
+open htmlcov/index.html
+```
+
+### Test Structure
+
+```
+quaizr/
+├── tests/
+│   ├── __init__.py            # Tests package
+│   ├── conftest.py            # Shared fixtures and mocks
+│   ├── test_helpers.py        # Unit tests for helpers.py
+│   └── test_app.py            # Tests for app.py logic
+├── pytest.ini                 # pytest configuration
+├── app.py
+├── helpers.py
+└── requirements.txt
+```
+
+### Test Coverage
+
+The test suite covers:
+
+**helpers.py:**
+- `click_button()` - Button toggle functionality
+- `click_start_quiz()` - Quiz initialization and state management
+- `store_hint_feedback()` - Feedback data storage
+
+**app.py:**
+- CSV loading and parsing
+- Session state initialization from URL params
+- Agent configurations
+- Quiz flow logic (score calculation, question progression)
+- Feedback storage mechanism
+- Error handling scenarios
+
+### Adding New Tests
+
+When adding new features, please follow these guidelines:
+
+1. Create test functions with descriptive names: `test_<feature>_<scenario>_<expected_result>`
+2. Use the provided fixtures in `conftest.py` for mocking
+3. Keep tests focused on single behaviors
+4. Use assertions to verify expected outcomes
