@@ -168,7 +168,7 @@ With your favourite code editor!
 You will require Python 3.11.14 (tested) and a code editor.
 
 1. Clone the repository and change directory to `quaizr`.
-2. Run `python -m nvenv venv` to create the virtual env.
+2. Run `python -m venv venv` to create the virtual env.
 3. Run `source ./venv/bin/activate` to activate the virtual env.
 4. Run `pip install -r requirements.txt` to install the application requirements.
 5. Make your code changes.
